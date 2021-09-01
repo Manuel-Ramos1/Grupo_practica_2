@@ -1,0 +1,63 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="HolaMundo.SiteMaster" %>
+<!--
+<!DOCTYPE html>
+ <script languaje="C#" runat="server">
+/*void BotonPulsado(Object fuente, EventArgs argumento)
+ {
+ enlace.HRef = "HolaMundo.html";
+ }*/
+ </script>
+<html>
+ <body>
+ <form id="formulario" method="post" runat="server">
+ <a href="ejemplo1.html" id="enlace" runat="server">Pulsar
+enlace</a><br />
+<!-- <button runat="server" id="boton" onserverclick="BotonPulsado"-->
+ <!--<b>Pulsa</b>
+ </button>
+ </form>
+</body>
+</html>-->
+
+<!DOCTYPE html>
+<script languaje ="C#" runat="server">
+ void CambiarColor(Object sender, EventArgs argumentos)
+ {
+ cuerpo.Style["background-color"] = Lista.Value;
+ }
+</script>
+<html lang="es">
+<body id ="cuerpo" runat="server">
+ <form id="WebForm" method="post" runat="server">
+ <select id="Lista" name="lista" runat="server">
+ <option value="red" selected>rojo</option>
+ <option value="gray">gris</option>
+ <option value="blue">azul</option>
+ <option value="pink">rosa</option>
+ <option value="green">verde</option>
+ <option value="yellow">amarillo</option>
+ </select>
+ <input type="button" runat="server" id="boton1" value="Cambia"
+onserverclick="CambiarColor"/>
+ </form>
+</body>
+</html>
+
+<!DOCTYPE html>
+<script languaje ="C#" runat="server">
+ void Pulsado(Object sender, EventArgs argumentos)
+ {
+ DateTime ahora;
+ ahora = DateTime.Now;
+ etiqueta.Text = "El momento es: " + ahora.ToString();
+ }
+</script>
+<html lang="es">
+<body>
+ <form id="WebForm" method="post" runat="server">
+ <asp:button id="boton" onClick="Pulsado" runat="server"
+ Text="Seleccionar" /> <br />
+ <asp:Label ID="etiqueta" runat="server" />
+ </form>
+</body>
+</html>
