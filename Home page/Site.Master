@@ -1,0 +1,29 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Home_page.SiteMaster" %>
+
+<!DOCTYPE html>
+<html lang="es">
+ <script languaje="C#" runat="server">
+ void Pulsado(Object sender, EventArgs args)
+ {
+ etiqueta.InnerText = lista.Value;
+ }
+ </script>
+<head runat="server">
+ <title><%: Page.Title %> - Script ASP.NET</title> <!--vienea ser el titulo-->
+</head>
+<body><!--titulo del menu despegable-->
+ <form id="WebForm" method="post" runat="server">
+      <h1>Seleccionar película</h1>  
+ <select id="lista" runat="server">
+ <option selected>La Vida es bella</option><!--el menú de opciones.-->
+ <option>Zootopia</option>
+ <option>Kungfu Panda</option>
+ <option>2001</option>
+ </select> 
+ <input type="button" id="boton" runat="server" value="Seleccionar"
+onserverclick="Pulsado" /> <!--boton para seleccionar una opcion-->
+ <br />
+ <div id="etiqueta" runat="server"></div>
+ </form>
+</body>
+</html>

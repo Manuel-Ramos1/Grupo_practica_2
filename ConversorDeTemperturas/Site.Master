@@ -1,0 +1,28 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ConversorDeTemperturas.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Conversor de temperatura</title>
+    </head>
+    <body>
+        <form id="Form1" runat="server" method="POST">
+        <div>
+        <h1>Conversor de temperatura</h1>
+        Convertir: &nbsp;
+        <input type="number" id="valor" runat="server"/>
+        &nbsp;Fahrenheith a
+        <select id="Temperaturas" runat="server"/>
+        <br/><br/>
+        <input type="submit" id="Convertir" runat="server" value="Aceptar"
+        onServerClick ="Convertir_ServerClick1"/>
+        <br/>
+        <div style="font-weight:bold" id="Resultado" runat="server"></div>
+    <br/><br/>
+    <input type="submit" id="MostrarGrafico" runat="server" value="Mostrar
+    Figura" OnServerClick ="MostrarGrafico_ServerClick" />
+    <br /><br />
+    <img id="Grafico" runat="server" />
+        </form>
+    </body>
+</html>
